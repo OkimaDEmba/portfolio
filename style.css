@@ -1,0 +1,12 @@
+.name {
+    font-family: Helvetica, "Times New Roman", serif;
+    justify-content: center;
+    border-block: 2px;
+    border-style: inset double;
+    border-bottom-color: aquamarine;
+    border-top-color: aquamarine;
+    border-width: 30px;
+}
+h2 p {
+    font-family: "Times New Roman", Georgia, serif;
+}
