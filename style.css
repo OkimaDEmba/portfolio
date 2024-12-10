@@ -4,9 +4,12 @@
     font-family: Helvetica, "Times New Roman", serif;
     text-align: center;
     border-style: inset double;
-    border-bottom-color: aquamarine;
+    border-bottom-color: bisque;
     border-top-color: aquamarine;
+    border-bottom-width: 4px;
+    color: white;
     padding: 0 50px;
+    background-color: #000000;
 
 }
 div {
