@@ -1,17 +1,52 @@
 .name {
+    box-sizing: border-box;
+    display: inline-block;
     font-family: Helvetica, "Times New Roman", serif;
     text-align: center;
     border-style: inset double;
     border-bottom-color: aquamarine;
     border-top-color: aquamarine;
-    margin: 70px auto;
-
+    padding: 0 50px;
 
 }
-h2 p {
+div {
+    text-align: center;
+    width: 100%;
+}
+h2{
+    text-align: left;
+}
+p {
+    text-align: center;
     font-family: "Times New Roman", Georgia, serif;
 }
 
 body {
     background: lightpink;
+}
+.menulist {
+    box-sizing: border-box;
+    position: relative;
+    top: 0;
+    left: 390%;
+    display: inline-block;
+    width: 120px;
+    background-color: maroon;
+    color: white;
+
+}
+.sous-menu{
+    display: none;
+}
+.sous-menu li{
+    box-sizing: border-box;
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+header ul{
+    float: left;
+}
+header > ul li:hover .sous-menu{
+    display: block;
 }
