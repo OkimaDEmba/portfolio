@@ -1,6 +1,14 @@
+/* Très important, sinon, la page commence légèrement décalée */
+* {
+    margin: 0;
+    padding: 0;
+}
 .name {
     box-sizing: border-box;
     display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
     font-family: Helvetica, "Times New Roman", serif;
     text-align: center;
     border-style: inset double;
@@ -10,46 +18,111 @@
     color: white;
     padding: 0 50px;
     background-color: #000000;
+    margin: 10px;
 
 }
-div {
-    text-align: center;
+
+.intro {
+    background-color: #49caff;
+    position: absolute;
+    top: 60px;
     width: 100%;
-}
-h2{
-    text-align: left;
-}
-p {
+    opacity: 50%;
+    box-sizing: border-box;
+    height: 60px;
     text-align: center;
-    font-family: "Times New Roman", Georgia, serif;
-}
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: bold;
+    color: #FFFFFF;
 
-body {
-    background: lightpink;
 }
+.firstparagraph {
+    text-align: justify;
+    display: block;
+    position: absolute;
+    top: 15%;
+    font-family: Barlow, Georgia, serif;
+    margin-left: 70px;
+}
+/* Mettre une autre position que relative ne me permet pas de bouger
+le block de nav.
+ */
+
+nav {
+    border: 2px solid red;
+    float: left;
+    position: relative;
+    top: 120px;
+
+}
+/*Lorsque je mets vertical-rl, le menu sort du mauvais côté. */
 .menulist {
     box-sizing: border-box;
-    position: relative;
-    top: 0;
-    left: 390%;
-    display: inline-block;
-    width: 120px;
+    position: sticky;
+    z-index: 10;
+    top: 120px;
+    display: block;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    margin-left: 0;
     background-color: maroon;
     color: white;
+    margin-top: 2px;
+    padding: 5px;
+    border: 2px solid green;
 
 }
 .sous-menu{
     display: none;
 }
 .sous-menu li{
+    display: inline-block;
     box-sizing: border-box;
-    float: none;
-    width: 100%;
-    text-align: left;
+    background-color: red;
+    writing-mode: lr;
+    text-align: right;
 }
-header ul{
-    float: left;
-}
-header > ul li:hover .sous-menu{
+nav > ul li:hover .sous-menu{
     display: block;
+    border: 2px solid greenyellow;
+    padding: 3px;
+    height: 100%;
+    background-color: white;
+    margin-top: 0;
+}
+/*Quand je fais directement un <a>, ça marche pas donc j'ai mis un
+un p puis un a
+*/
+footer p{
+    display: inline-block;
+    font-family: fantasy, cursive;
+    box-sizing: border-box;
+    border: 2px solid lavender;
+    background-color: gray;
+    color: #fef6ff;
+    padding: 10px;
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    text-align: left;
+    font-size: 20px;
+    text-transform: uppercase;
+    height: 50px;
+}
+
+footer p a{
+    text-decoration: none;
+    color: #fef6ff;
+}
+
+
+
+
+.logo{
+    box-sizing: border-box;
+    position: fixed;
+    display: block;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FFFFFF;
 }
