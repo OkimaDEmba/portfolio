@@ -3,21 +3,22 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background: linear-gradient(#94eaff, #e2a3ff);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
 .name {
     box-sizing: border-box;
     display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
-    font-family: Helvetica, "Times New Roman", serif;
-    text-align: center;
-    border-style: inset double;
-    border-bottom-color: bisque;
-    border-top-color: aquamarine;
-    border-bottom-width: 4px;
+    font-family: Charmonman, "Times New Roman", serif;
+    text-align: left;
     color: white;
     padding: 0 50px;
-    background-color: #000000;
     margin: 10px;
 
 }
@@ -29,7 +30,7 @@
     width: 100%;
     opacity: 50%;
     box-sizing: border-box;
-    height: 60px;
+    height: 80px;
     text-align: center;
     font-family: 'Roboto Mono', sans-serif;
     font-weight: bold;
@@ -37,13 +38,15 @@
     color: #FFFFFF;
     border-top-left-radius: 80px;
     border-bottom-right-radius: 80px;
-
+.intro h2{
+    opacity: 100%;
+}
 }
 .firstparagraph {
     text-align: justify;
     display: block;
     position: absolute;
-    top: 15%;
+    top: 17%;
     font-family: Barlow, Georgia, serif;
     margin-left: 70px;
 }
@@ -57,7 +60,7 @@ nav {
     border: 2px solid red;
     float: left;
     position: relative;
-    top: 120px;
+    top: 140px;
 
 }
 /*Lorsque je mets vertical-rl, le menu sort du mauvais côté. */
@@ -71,6 +74,7 @@ nav {
     text-orientation: upright;
     margin-left: 0;
     background-color: maroon;
+    background-origin: padding-box;
     color: white;
     margin-top: 2px;
     padding: 5px;
