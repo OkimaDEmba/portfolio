@@ -45,62 +45,58 @@ body {
 .firstparagraph {
     text-align: justify;
     display: block;
-    position: absolute;
-    top: 17%;
+    position: fixed;
     font-family: Barlow, Georgia, serif;
-    margin-left: 70px;
-}
-/* Mettre une autre position que relative ne me permet pas de bouger
-le block de nav.
- */
-
-nav {
-    display: flex;
-    flex-direction: column;
     border: 2px solid red;
-    float: left;
-    position: relative;
-    top: 140px;
+    left: 30px;
+    top: 160px;
+    margin-left: 30px;
+}
+.menulist {
+    display: grid;
+    position: absolute;
+    top: 170px;
+    grid-template-columns: 40px min-content;
+    grid-template-rows: 220px 200px 150px;
+    width: 300px;
+    border: 2px solid black;
 
 }
-/*Lorsque je mets vertical-rl, le menu sort du mauvais côté. */
-.menulist {
-    box-sizing: border-box;
-    position: sticky;
-    z-index: 10;
-    top: 120px;
-    display: block;
+.mainmenu{
+    border: 2px solid purple;
+    grid-column: 1;
+    position:sticky;
     writing-mode: vertical-lr;
     text-orientation: upright;
-    margin-left: 0;
-    background-color: maroon;
-    background-origin: padding-box;
-    color: white;
-    margin-top: 2px;
-    padding: 5px;
-    border: 2px solid green;
+    padding-left: 9px;
+    z-index: 10;
+    background-color: #e2a3ff;
+    color: #FFFFFF;
+}
+.submenulist{
+    display: none;
+    grid-column:2;
+    grid-template-columns: subgrid;
+    grid-template-rows: repeat(3, 60px);
+}
+
+.submenu{
+    grid-column: 2;
+    margin: 12px;
+    padding: 7px;
+    border: 2px dashed green;
+    background-color: #3e78cc;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.s2{
 
 }
-.sous-menu{
-    display: none;
+
+nav > ul li:hover .submenulist{
+    display: grid;
 }
-.sous-menu li{
-    display: inline-block;
-    box-sizing: border-box;
-    background-color: red;
-    writing-mode: lr;
-    text-align: right;
-    margin-top: 2px;
-}
-nav > ul li:hover .sous-menu{
-    display: flex;
-    flex-direction: row;
-    border: 2px solid greenyellow;
-    padding: 3px;
-    height: 100%;
-    background-color: white;
-    margin: -8px -10px -5px 6px;
-}
+
 /*Quand je fais directement un <a>, ça marche pas donc j'ai mis un
 un p puis un a
 */
@@ -135,5 +131,4 @@ footer p a{
     display: block;
     bottom: 20px;
     right: 20px;
-    background-color: #FFFFFF;
 }
