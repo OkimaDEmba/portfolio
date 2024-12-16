@@ -2,16 +2,16 @@
 * {
     margin: 0;
     padding: 0;
+    overflow: visible;
 }
 body {
-    background: linear-gradient(#94eaff, #e2a3ff);
-    background-repeat: no-repeat;
+    background: linear-gradient(#94eaff, #e2a3ff) no-repeat fixed;
     background-size: 100%;
-    background-attachment: fixed;
+    border: 2px solid;
 }
 .name {
     box-sizing: border-box;
-    display: inline-block;
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -25,7 +25,8 @@ body {
 
 .intro {
     background-color: #49caff;
-    position: absolute;
+    display: block;
+    position: fixed;
     top: 60px;
     width: 100%;
     opacity: 50%;
@@ -43,78 +44,93 @@ body {
 }
 }
 .firstparagraph {
-    text-align: justify;
-    display: block;
-    position: fixed;
+    text-align: left;
     font-family: Barlow, Georgia, serif;
     border: 2px solid red;
-    left: 30px;
-    top: 160px;
-    margin-left: 30px;
+    margin-left: 60px;
+
+}
+nav{
+    border: 4px solid green;
+    width: 300px;
+    height: 100%;
+    overflow: visible;
+    z-index: 1000;
 }
 .menulist {
     display: grid;
-    position: absolute;
-    top: 170px;
-    grid-template-columns: 40px min-content;
-    grid-template-rows: 220px 200px 150px;
+    grid-template-columns: 40px min-content min-content;
+    grid-template-rows: 250px 220px 170px;
+    margin: 0 auto;
     width: 300px;
+    top: 170px;
     border: 2px solid black;
+    text-transform: uppercase;
+    z-index: 1000;
 
 }
 .mainmenu{
-    border: 2px solid purple;
+    list-style-type: none;
+    border-right: 2px solid;
+    border-top: 2px solid;
+    border-top-color: deepskyblue;
+    border-right-color: deepskyblue;
     grid-column: 1;
-    position:sticky;
+    height: 100%;
     writing-mode: vertical-lr;
     text-orientation: upright;
     padding-left: 9px;
     z-index: 10;
-    background-color: #e2a3ff;
+    background-color: #3e78cc;
     color: #FFFFFF;
+    font-family: Impact, serif;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-top: 6px;
 }
 .submenulist{
-    display: none;
-    grid-column:2;
+    opacity: 0;
     grid-template-columns: subgrid;
-    grid-template-rows: repeat(3, 60px);
+    grid-template-rows: min-content min-content min-content;
 }
 
 .submenu{
     grid-column: 2;
-    margin: 12px;
-    padding: 7px;
-    border: 2px dashed green;
+    margin-left: 7px;
+    padding: 15px;
+    border-right: 4px solid;
     background-color: #3e78cc;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    border-right-color: deepskyblue;
 }
-.s2{
-
+nav > ul> li:first-child{
+    border-top: none;
 }
-
 nav > ul li:hover .submenulist{
     display: grid;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+footer{
+    border: 4px solid white;
 }
 
 /*Quand je fais directement un <a>, ça marche pas donc j'ai mis un
 un p puis un a
 */
 footer p{
-    display: inline-block;
+    float: left;
     font-family: fantasy, cursive;
     box-sizing: border-box;
     border: 2px solid lavender;
     background-color: gray;
     color: #fef6ff;
     padding: 10px;
-    position: fixed;
-    bottom: 30px;
-    left: 20px;
     text-align: left;
     font-size: 20px;
     text-transform: uppercase;
-    height: 50px;
 }
 
 footer p a{
@@ -127,8 +143,6 @@ footer p a{
 
 .logo{
     box-sizing: border-box;
-    position: fixed;
+    float: right;
     display: block;
-    bottom: 20px;
-    right: 20px;
 }
