@@ -1,148 +1,42 @@
-/* Très important, sinon, la page commence légèrement décalée */
 * {
     margin: 0;
     padding: 0;
-    overflow: visible;
 }
-body {
+body{
+    min-height: 100vh;
     background: linear-gradient(#94eaff, #e2a3ff) no-repeat fixed;
-    background-size: 100%;
-    border: 2px solid;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+    "navbar navbar"
+    "title title"
+    "sidebar main"
+    "footer footer";
 }
 .name {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-family: Charmonman, "Times New Roman", serif;
-    text-align: left;
-    color: white;
-    padding: 0 50px;
-    margin: 10px;
-
+    font-family: Barlow, sans-serif;
 }
 
-.intro {
-    background-color: #49caff;
-    display: block;
-    position: fixed;
-    top: 60px;
-    width: 100%;
-    opacity: 50%;
-    box-sizing: border-box;
-    height: 80px;
-    text-align: center;
-    font-family: 'Roboto Mono', sans-serif;
-    font-weight: bold;
-    font-size: 32px;
-    color: #FFFFFF;
-    border-top-left-radius: 80px;
-    border-bottom-right-radius: 80px;
-.intro h2{
-    opacity: 100%;
-}
-}
-.firstparagraph {
-    text-align: left;
-    font-family: Barlow, Georgia, serif;
-    border: 2px solid red;
-    margin-left: 60px;
-
-}
 nav{
-    border: 4px solid green;
-    width: 300px;
-    height: 100%;
-    overflow: visible;
-    z-index: 1000;
+    grid-area: navbar;
 }
-.menulist {
-    display: grid;
-    grid-template-columns: 40px min-content min-content;
-    grid-template-rows: 250px 220px 170px;
-    margin: 0 auto;
-    width: 300px;
-    top: 170px;
-    border: 2px solid black;
-    text-transform: uppercase;
-    z-index: 1000;
-
-}
-.mainmenu{
-    list-style-type: none;
-    border-right: 2px solid;
-    border-top: 2px solid;
-    border-top-color: deepskyblue;
-    border-right-color: deepskyblue;
+nav h1{
     grid-column: 1;
-    height: 100%;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    padding-left: 9px;
-    z-index: 10;
-    background-color: #3e78cc;
-    color: #FFFFFF;
-    font-family: Impact, serif;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    padding-top: 6px;
-}
-.submenulist{
-    opacity: 0;
-    grid-template-columns: subgrid;
-    grid-template-rows: min-content min-content min-content;
-}
-
-.submenu{
-    grid-column: 2;
-    margin-left: 7px;
-    padding: 15px;
-    border-right: 4px solid;
-    background-color: #3e78cc;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-right-color: deepskyblue;
-}
-nav > ul> li:first-child{
-    border-top: none;
-}
-nav > ul li:hover .submenulist{
-    display: grid;
-    opacity: 1;
-    transition: 0.5s;
-}
-
-footer{
-    border: 4px solid white;
-}
-
-/*Quand je fais directement un <a>, ça marche pas donc j'ai mis un
-un p puis un a
-*/
-footer p{
-    float: left;
-    font-family: fantasy, cursive;
-    box-sizing: border-box;
-    border: 2px solid lavender;
-    background-color: gray;
-    color: #fef6ff;
-    padding: 10px;
-    text-align: left;
-    font-size: 20px;
     text-transform: uppercase;
 }
-
-footer p a{
-    text-decoration: none;
-    color: #fef6ff;
+nav ul{
+    grid-column: 2;
 }
-
-
-
-
-.logo{
-    box-sizing: border-box;
-    float: right;
-    display: block;
+aside{
+    grid-area: sidebar;
+}
+.title{
+   grid-area: title;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
 }
