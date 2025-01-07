@@ -4,30 +4,38 @@
 }
 body{
     min-height: 100vh;
-    background: linear-gradient(#94eaff, #e2a3ff) no-repeat fixed;
+    background-image: url(../portfolio/bg.jpg);
+    background-blend-mode: lighten;
+    background-color: rgba(255,255,255,0.25);
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
-    "navbar navbar"
+    "profile navbar"
     "title title"
     "sidebar main"
     "footer footer";
 }
-.name {
-    font-family: Barlow, sans-serif;
+.profile{
+    grid-area: profile;
+    font-family: "Roboto Mono", sans-serif;
+    text-transform: uppercase;
 }
-
 nav{
     grid-area: navbar;
 }
-nav h1{
-    grid-column: 1;
-    text-transform: uppercase;
-}
 nav ul{
-    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
 }
+nav ul li{
+    background: #a9ff4f;
+    border-right: 1px solid deeppink;
+    text-align: center;
+    vertical-align: middle;
+}
+
 aside{
     grid-area: sidebar;
 }
@@ -36,6 +44,7 @@ aside{
 }
 main{
     grid-area: main;
+    font-family: Barlow, sans-serif;
 }
 footer{
     grid-area: footer;
