@@ -20,6 +20,10 @@ body{
     grid-area: profile;
     font-family: "Roboto Mono", sans-serif;
     text-transform: uppercase;
+    background: linear-gradient(to right, white 55%, #033FD7);
+    border-bottom: 4px solid deepskyblue;
+    font-size: 10pt;
+    text-align: left;
 }
 nav{
     grid-area: navbar;
@@ -27,13 +31,29 @@ nav{
 nav ul{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 60px;
     list-style: none;
 }
 nav ul li{
-    background: #a9ff4f;
-    border-right: 1px solid deeppink;
-    text-align: center;
-    vertical-align: middle;
+    display: grid;
+    background: #033FD7;
+    color: white;
+    border-right: 1px solid deepskyblue;
+    border-bottom: 4px solid deepskyblue;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+nav ul li:first-child{
+    border-bottom-left-radius: 0;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+nav > ul li ul{
+    display: none;
 }
 
 aside{
