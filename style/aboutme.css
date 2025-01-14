@@ -4,7 +4,7 @@
 }
 body{
     min-height: 100vh;
-    background-image: url(../portfolio/images/bg.jpg);
+    background-image: url(../images/bg.jpg);
     background-blend-mode: lighten;
     background-color: rgba(255,255,255,0.35);
     display: grid;
@@ -13,14 +13,14 @@ body{
     grid-template-areas:
     "profile navbar"
     "title title"
-    "sidebar main"
+    "main main"
     "footer footer";
 }
 .profile{
     grid-area: profile;
-    font-family: "Roboto Mono", sans-serif;
+    font-family: Kanit, sans-serif;
     text-transform: uppercase;
-    background: linear-gradient(to right, #F7B1C7, #FBDCE4, #F7AFBB, #FBDCE4, #F7B1C7 64%, white, #033FD7);
+    background: linear-gradient(to right, #F7B1C7, #FBDCE4, #F7AFBB, #FBDCE4, #F7B1C7 64%, #FFF, rgba(93, 59, 43, 0.3));
     border-bottom: 4px solid deepskyblue;
     font-size: 10pt;
     text-align: left;
@@ -47,8 +47,8 @@ nav ul{
 }
 nav ul li a{
     display: grid;
-    background: #033FD7;
-    color: white;
+    background: rgba(93, 59, 43, 0.3);
+    color: #FFF;
     height: 94%;
     border-right: 1px solid deepskyblue;
     border-bottom: 4px solid deepskyblue;
@@ -60,6 +60,7 @@ nav ul li a{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     text-decoration: none;
+    text-shadow: purple 2px 2px 2px;
 }
 .first{
     border-bottom-left-radius: 0;
@@ -75,7 +76,7 @@ aside{
     grid-area: sidebar;
 }
 .title{
-   grid-area: title;
+    grid-area: title;
 }
 main{
     grid-area: main;
