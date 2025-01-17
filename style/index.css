@@ -21,7 +21,9 @@ body{
     font-family: Kanit, sans-serif;
     text-transform: uppercase;
     background: linear-gradient(to right, #F7B1C7, #FBDCE4, #F7AFBB, #FBDCE4, #F7B1C7 64%, #FFF, rgba(93, 59, 43, 0.3));
-    border-bottom: 4px solid deepskyblue;
+    border-bottom: solid;
+    border-image: linear-gradient(to right, #c8fbd7 64%, #FFF, #b3c1fb) 1;
+    border-bottom-width: 4px;
     font-size: 10pt;
     text-align: left;
 }
@@ -37,7 +39,7 @@ body{
 }
 nav{
     grid-area: navbar;
-    overflow: visible;
+    z-index: 1000;
 }
 nav .menulist{
     display: grid;
@@ -50,8 +52,8 @@ nav ul li a{
     background: rgba(93, 59, 43, 0.3);
     color: #FFF;
     height: 94%;
-    border-right: 1px solid deepskyblue;
-    border-bottom: 4px solid deepskyblue;
+    border-right: 1px solid #b3c1fb;
+    border-bottom: 4px solid #b3c1fb;
     font-size: 14pt;
     font-family: Barlow, sans-serif;
     font-weight: bolder;
@@ -66,22 +68,24 @@ nav ul li a{
     border-bottom-left-radius: 0;
 }
 nav > ul li .submenulist{
+    display: none;
     opacity: 0;
 }
 nav ul li > a:hover{
     background: #333;
     transition: 0.4s ease-out;
 }
-nav > ul li:hover .submenulist{
+nav > ul li:hover > .submenulist{
     display: grid;
     opacity: 1;
-    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(3, 2fr);
     transition: 0.2s ease;
 }
 
 nav ul li ul li a{
     border-left: 1px solid deepskyblue;
     border-radius: 10px;
+    text-align: center;
 }
 li{
     list-style-type: none
@@ -95,4 +99,22 @@ main{
 }
 footer{
     grid-area: footer;
+}
+
+.title{
+    display: grid;
+    grid-template-rows: 140px;
+    text-align: center;
+    align-items: center;
+}
+
+.title h2{
+    padding: 10px;
+    font-family: "Rubik Mono One", sans-serif;
+    font-size: 22pt;
+    background: linear-gradient(to top, #FBDCE4,rgba(93, 59, 43, 0.3), rgba(93, 59, 43, 0.3), rgba(93, 59, 43, 0.3), #FBDCE4);
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 140px;
+    color: white;
+    font-weight: lighter;
 }
