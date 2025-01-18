@@ -3,10 +3,6 @@
     padding: 0;
 }
 body{
-    min-height: 100vh;
-    background-image: url(../images/bg.jpg);
-    background-blend-mode: lighten;
-    background-color: rgba(255,255,255,0.35);
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: auto auto 1fr auto;
@@ -15,6 +11,10 @@ body{
     "title title"
     "main main"
     "footer footer";
+    min-height: 100vh;
+    background-image: url(../images/bg.jpg);
+    background-blend-mode: lighten;
+    background-color: rgba(255,255,255,0.35);
 }
 .profile{
     grid-area: profile;
@@ -22,7 +22,7 @@ body{
     text-transform: uppercase;
     background: linear-gradient(to right, #F7B1C7, #FBDCE4, #F7AFBB, #FBDCE4, #F7B1C7 64%, #FFF, rgba(93, 59, 43, 0.3));
     border-bottom: solid;
-    border-image: linear-gradient(to right, #c8fbd7 64%, #FFF, #b3c1fb) 1;
+    border-image: linear-gradient(to right, #c8fbd7 64%, #FFF, deepskyblue) 1;
     border-bottom-width: 4px;
     font-size: 10pt;
     text-align: left;
@@ -52,8 +52,8 @@ nav ul li a{
     background: rgba(93, 59, 43, 0.3);
     color: #FFF;
     height: 94%;
-    border-right: 1px solid #b3c1fb;
-    border-bottom: 4px solid #b3c1fb;
+    border-right: 1px solid deepskyblue;
+    border-bottom: 4px solid deepskyblue;
     font-size: 14pt;
     font-family: Barlow, sans-serif;
     font-weight: bolder;
@@ -94,7 +94,10 @@ li{
    grid-area: title;
 }
 main{
+    display: grid;
     grid-area: main;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     font-family: Barlow, sans-serif;
 }
 footer{
@@ -112,9 +115,20 @@ footer{
     padding: 10px;
     font-family: "Rubik Mono One", sans-serif;
     font-size: 22pt;
-    background: linear-gradient(to top, #FBDCE4,rgba(93, 59, 43, 0.3), rgba(93, 59, 43, 0.3), rgba(93, 59, 43, 0.3), #FBDCE4);
+    background: linear-gradient(to top, #FBDCE4,rgba(93, 59, 43, 0.4), rgba(93, 59, 43, 0.4), rgba(93, 59, 43, 0.4), #FBDCE4);
     border-top-left-radius: 100px;
     border-bottom-right-radius: 140px;
+    border: 6px inset deepskyblue;
     color: white;
     font-weight: lighter;
+}
+.fistparagraph{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.dinapic{
+    grid-column: 3/4;
+    grid-row: 1;
+    width: 260px;
+    border: 8px double deepskyblue;
 }
