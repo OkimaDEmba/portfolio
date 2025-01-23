@@ -1,10 +1,11 @@
-let toggle = true;
+let checkbox = document.getElementById("togglepic");
 const img = document.getElementById("dinapic");
-let checkbox = document.getElementById("test");
 
-
-checkbox.addEventListener("change", function(){
-  if (this.checked){
-    document.getElementById("dinapic").src = 'images\\curseddina.jpg';
+checkbox.addEventListener("change", e =>{
+  if (e.target.checked){
+    img.src = "images\\curseddina.jpg";
+  }
+  else {
+    img.src = "images\\dina.jpg";
   }
 })

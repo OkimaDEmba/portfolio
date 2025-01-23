@@ -92,6 +92,10 @@ li{
 }
 .title{
    grid-area: title;
+   grid-row: 3;
+   grid-column: 1/4;
+   column-span: 4;
+   text-align: center;
 }
 main{
     display: grid;
@@ -104,15 +108,7 @@ footer{
     grid-area: footer;
 }
 
-.title{
-    grid-row: 3;
-    grid-column: 1/4;
-    column-span: 4;
-    text-align: center;
-}
-
 .title h2{
-    padding: 10px;
     font-family: "Rubik Mono One", sans-serif;
     font-size: 22pt;
     background: linear-gradient(to top, #FBDCE4,rgba(93, 59, 43, 0.4), rgba(93, 59, 43, 0.4), rgba(93, 59, 43, 0.4), #FBDCE4);
@@ -121,25 +117,31 @@ footer{
     border: 6px inset deepskyblue;
     color: white;
     font-weight: lighter;
+    padding: 10px;
+    margin-top: 1%;
 }
-
-.dinapic{
+.image-container{
     grid-column: 2/3;
     grid-row: 1;
     width: 450px;
+    height: 450px;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+.dinapic{
+    width: 100%;
+    height: 100%;
     background: rgba(255, 255, 255, 0.4);
     border: 8px double deepskyblue;
-    margin-top: 10%;
-    margin-left: 10%;
+
 }
 
-.togglepic{
+.togglebutton{
     grid-column: 2/3;
-    grid-row: 2;
+    grid-row: 1;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5%;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 label{
     width: 30px;
@@ -165,12 +167,12 @@ label:after{
     transition: 0.2s;
 }
 
-/*input{
+input{
     width: 0;
     height: 0;
     visibility: hidden;
 }
-*/
+
 input:checked + label{
     background: black;
 }
