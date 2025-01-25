@@ -117,8 +117,9 @@ main{
     background-image: linear-gradient(to top, #FFF, rgba(255,194,243,0.47),rgba(255,194,243,0.7), rgba(255,194,243,0.47), #FFF);
     color: white;
 }
-.image-container{
+.dinapic-container{
     grid-column: 1;
+    grid-row: 1;
     width: 420px;
     height: 570px;
     margin-left: 55%;
@@ -131,6 +132,19 @@ main{
     border-radius: 20px;
     box-shadow: 5px 5px 8px #000 ;
 
+}
+.volley-container{
+    grid-column: 4;
+    grid-row: 2;
+    width: 420px;
+    height: 570px;
+}
+.volleydina{
+    width: 100%;
+    height: 100%;
+    border: 5px outset black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 8px #000 ;
 }
 .firstparagraph{
     grid-area: main;
@@ -156,11 +170,13 @@ footer{
     grid-area: footer;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
 }
 .top{
     grid-column-start: -1;
-    margin-right: 120px;
-    margin-bottom: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 170px;
 
 }
 .top-container{
@@ -168,7 +184,7 @@ footer{
 }
 .top-container img{
     width: 100%;
-    background : rgba(0,0,0,0.3);
+    background : rgba(0,0,0,0.2);
     border-radius: 20px;
 }
 .top-container img:hover{
