@@ -13,8 +13,7 @@ body{
     "footer footer";
     min-height: 100vh;
     background-image: url(../images/bg.jpg);
-    background-blend-mode: lighten;
-    background-color: rgba(255,255,255,0.35);
+    background-repeat: repeat;
 }
 .profile{
     grid-area: profile;
@@ -94,7 +93,7 @@ li{
 main{
     grid-area: main;
     display: grid;
-    grid-template-columns: repeat(8, auto);
+    grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(6, auto);
 }
 .title{
@@ -120,47 +119,187 @@ main{
 .dinapic-container{
     grid-column: 1;
     grid-row: 1;
+    display: flex;
     width: 420px;
     height: 570px;
-    margin-left: 55%;
+    margin: 125px auto;
 }
 
 .dinapic{
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border: 5px outset black;
     border-radius: 20px;
     box-shadow: 5px 5px 8px #000 ;
 
 }
-.volley-container{
-    grid-column: 4;
+.prog-container{
+    grid-column: 2;
     grid-row: 2;
     width: 420px;
     height: 570px;
+    margin: 125px auto;
 }
+.prog-pic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px outset black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 8px #000 ;
+}
+.volley-container{
+    grid-column: 1;
+    grid-row: 3;
+    width: 420px;
+    height: 570px;
+    margin: 125px auto;
+}
+
 .volleydina{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px outset black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 8px #000 ;
+}
+.yt-container{
+    grid-column: 2;
+    grid-row: 4;
+    width: 420px;
+    height: 570px;
+    margin: 125px auto;
+}
+
+.musicdina{
     width: 100%;
     height: 100%;
     border: 5px outset black;
     border-radius: 20px;
     box-shadow: 5px 5px 8px #000 ;
 }
-.firstparagraph{
+.videogame-container{
+    grid-column: 1;
+    grid-row: 5;
+    width: 420px;
+    height: 570px;
+    margin: 125px auto;
+}
+.videogamedina{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px outset black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 8px #000 ;
+}
+.aboutme-part{
     grid-area: main;
-    grid-column: 4;
+    grid-column: 2;
     grid-row: 1;
     width: 300px;
     font-family: Barlow, sans-serif;
     font-size: 16pt;
-    margin-left: 90px;
+    margin: auto;
     text-align: center;
     word-wrap: break-word;
     background-image: linear-gradient(to bottom, rgba(255,255,255,0.6),rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(253,229,233,0.88));
     border-radius: 70px;
-    padding-top : 38%;
+    padding : 19% 5% 19% 5%;
     color: white;
     text-shadow: black 1px 1px 1px;
+}
+.prog-part{
+    grid-area: main;
+    grid-column: 1;
+    grid-row: 2;
+    width: 300px;
+    font-family: Barlow, sans-serif;
+    font-size: 16pt;
+    margin: auto;
+    text-align: center;
+    word-wrap: break-word;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6),rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(253,229,233,0.88));
+    border-radius: 70px;
+    padding : 19% 5% 19% 5%;
+    color: white;
+    text-shadow: black 1px 1px 1px;
+}
+.volley-part{
+    grid-area: main;
+    grid-column: 2;
+    grid-row: 3;
+    width: 300px;
+    font-family: Barlow, sans-serif;
+    font-size: 16pt;
+    margin : auto;
+    text-align: center;
+    word-wrap: break-word;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6),rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(253,229,233,0.88));
+    border-radius: 70px;
+    padding : 19% 5% 19% 5%;
+    color: white;
+    text-shadow: black 1px 1px 1px;
+}
+.music-part{
+    grid-area: main;
+    grid-column: 1;
+    grid-row: 4;
+    width: 300px;
+    font-family: Barlow, sans-serif;
+    font-size: 16pt;
+    margin: auto;
+    text-align: center;
+    word-wrap: break-word;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6),rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(253,229,233,0.88));
+    border-radius: 70px;
+    padding : 19% 5% 19% 5%;
+    color: white;
+    text-shadow: black 1px 1px 1px;
+}
+.videogame-part{
+    grid-area: main;
+    grid-column: 2;
+    grid-row: 5;
+    width: 300px;
+    font-family: Barlow, sans-serif;
+    font-size: 16pt;
+    margin : auto;
+    text-align: center;
+    word-wrap: break-word;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6),rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(253,229,233,0.88));
+    border-radius: 70px;
+    padding : 19% 5% 19% 5%;
+    color: white;
+    text-shadow: black 1px 1px 1px;
+}
+#windscene{
+    visibility: hidden;
+}
+.hover{
+    font-family: Deneane, sans-serif;
+    font-size: 18pt;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    overflow: visible;
+    position: relative;
+    left: 435px;
+    top: -500px;
+    background: rgba(0,0,0,0.3);
+    padding: 10px 0;
+    border-radius: 20px;
+}
+.soundicon{
+    position: relative;
+    width: 40px;
+    top: -250px;
+    left: 430px;
+    transform: rotate(90deg);
+    overflow: visible;
 }
 .other{
     grid-column: 1/2;

@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Charmonman&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap" rel="stylesheet">
+  <script src="scripts/aboutmescript.js" defer></script>
 </head>
 <body>
   <div class="profile">
@@ -18,10 +19,10 @@
       <li class="mainmenu m1"><a class="first" href="portfolio.html">Home</a></li>
       <li class="mainmenu m2"><a href="aboutme.html">About Me</a>
         <ul class="submenulist list1">
-          <li class="submenu s1"><a href="#">Programming</a></li>
-          <li class="submenu s2"><a href="#">Volleyball</a></li>
-          <li class="submenu s3"><a href="#">Music</a></li>
-          <li class="submenu s4"><a href="#">Video games</a></li>
+          <li class="submenu s1"><a href="#programming">Programming</a></li>
+          <li class="submenu s2"><a href="#volleyball">Volleyball</a></li>
+          <li class="submenu s3"><a href="#music">Music</a></li>
+          <li class="submenu s4"><a href="#videogame">Video games</a></li>
         </ul>
       </li>
       <li class="mainmenu m3"><a href="projects.html">Projects</a></li>
@@ -36,27 +37,57 @@
     <div class = "dinapic-container">
       <img src = "images/dinaaboutme.jpg" class="dinapic" alt= "Photo de moi">
     </div>
-    <div class="firstparagraph">
+    <div class="aboutme-part">
       <p>My name is Dina.<br>I'm a hardworking 25 year old man, currently working as<br>
         a waiter in a japanese restaurant. I studied japanese in university and I am now learning<br>
         about programming so I could work in the field that I love.
     </div>
-    <div class="volley-container">
+    <div class="prog-container" id="programming">
+      <img src="images/programming.jpg" class="prog-pic" alt="Photo de programmation">
+    </div>
+    <div class="prog-part">
+      <p>As of now,<br>
+        I am learning HTML, CSS and JavaScript and I already learned how to use Python.<br>
+        I'm planning on taking part in the coding bootcamp called La Capsule
+      in order to get in Epitech's Master's degree by the end of September. </p>
+    </div>
+    <div class="volley-container" id="volleyball">
       <img src="images/volleydina.jpg" class="volleydina" alt= "Photo de volleyball">
     </div>
-    <div class="other">
-      <p class="other">J'ai pu actuellement apprendre à coder en Python, JavaScript et HTML/CSS en autodidacte.<br>
-        Je suis admis à La Capsule à partir du 24 mars pour deux mois de formation intensive.</p>
-      <p class="other">Avant, pendant et après cette formation, je compte me servir de ce site portfolio afin de<br>
-        mettre en avant et répertorier mes différents projets ainsi que des informations générales<br>
-        à mon propos.</p>
+    <div class="volley-part">
+      <p>One of my main passion<br>
+      is volleyball. I started 6 years ago, back when I was in university. Ever since I started,
+      I loved it. The feeling of freedom I feel when playing volleyball is a feeling I never felt in
+      any other sports. </p>
+    </div>
+    <div class="yt-container" id="music">
+      <iframe class="musicdina" src="https://www.youtube.com/embed/UmMhmem-JPE" title="DIMLIM - What's up ? (Official Video)" rel="0" allow="picture-in-picture; web-share; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    <div class="music-part">
+      <p>Music plays a HUGE part<br>
+      in my life. I've been listening to music for 16 years now and ever since I got my own phone,
+      I have always been listening to music when going out. I love making playlists that flow well together,
+      discovering new songs, sounds and artists and listening to them on my music player whenever I get the occasion.</p>
+    </div>
+    <div class="videogame-container" id="videogame">
+      <img class ="videogamedina" id="videogamedina" src="images/videogame.jpg" alt="Photo de jeu">
+      <img class ="soundicon" src="images/volume.png">
+      <audio controls id="windscene" src="audio/windscene.flac">Wind Scene</audio>
+      <p class="hover">Hover to listen !</p>
+    </div>
+    <div class="videogame-part">
+      <p>I love video games.<br>
+      I have loved video games for as long as I can remember. I usually tend to like RPG's and
+      most particularly J-RPG's, as I love those games' story, characters and especially music.
+      For a few years now, I have been mostly playing on PC, but I also really like the Nintendo Switch.
+      My favourite game would be Chrono Trigger.</p>
     </div>
   </main>
 <footer>
   <div class="top">
-    <a href="#aboutme">
+    <a href="#home">
       <div class="top-container">
-        <img src="images/totop.png">
+        <img src="images/totop.png" alt="Bouton pour le haut de page">
       </div>
     </a>
   </div>
