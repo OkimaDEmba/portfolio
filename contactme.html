@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width">
   <meta charset="UTF-8">
   <title>Portfolio de Dina</title>
   <link href = "style/aboutme.css" rel = "stylesheet">
@@ -11,23 +11,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="profile">
-  <h1 id="home"><a href="portfolio.html">Dina Minh</a></h1>
-</div>
-<nav>
-  <ul class="menulist">
-    <li class="mainmenu m1"><a class="first" href="portfolio.html">Home</a></li>
-    <li class="mainmenu m2"><a href="aboutme.html">About Me</a>
-      <ul class="submenulist list1">
-        <li class="submenu s1"><a href="aboutme.html#programming">Programming</a></li>
-        <li class="submenu s2"><a href="aboutme.html#volleyball">Volleyball</a></li>
-        <li class="submenu s3"><a href="aboutme.html#music">Music</a></li>
-        <li class="submenu s4"><a href="aboutme.html#videogame">Video games</a></li>
-      </ul>
-    </li>
-    <li class="mainmenu m3"><a href="projects.html">Projects</a></li>
-    <li class="mainmenu m4"><a href="contactme.html">Contact</a></li>
-  </ul>
-</nav>
+  <div class="profile">
+    <h1 id="home"><a href="portfolio.html">Dina Minh</a></h1>
+  </div>
+  <nav>
+    <ul class="menulist">
+      <li class="mainmenu m1"><a class="first" href="portfolio.html">Home</a></li>
+      <li class="mainmenu m2"><a href="aboutme.html">About Me</a>
+        <ul class="submenulist list1">
+          <li class="submenu s1"><a href="aboutme.html#programming">Programming</a></li>
+          <li class="submenu s2"><a href="aboutme.html#volleyball">Volleyball</a></li>
+          <li class="submenu s3"><a href="aboutme.html#music">Music</a></li>
+          <li class="submenu s4"><a href="aboutme.html#videogame">Video games</a></li>
+        </ul>
+      </li>
+      <li class="mainmenu m3"><a href="projects.html">Projects</a></li>
+      <li class="mainmenu m4"><a href="contactme.html">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <form>
+      <label for="fullname">Your Name</label>
+      <input name="fullname" type="text" autocomplete="name" id="fullname">
+      <label for="email">Your mail address</label>
+      <input name="email" type="text" id="email" autocomplete="mail">
+      <label for="object">Object</label>
+      <input name="object" type="text" id="object">
+      <label for="message">Type your message</label>
+      <input name="message" type="text" id="message">
+    </form>
+  </main>
+
 </body>
 </html>

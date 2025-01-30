@@ -101,7 +101,7 @@ li{
 main{
     grid-area: main;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: 50px repeat(2, 50%);
     grid-template-rows: auto 150px auto 150px auto 150px auto 150px auto;
 }
 .title{
@@ -163,7 +163,7 @@ main{
     z-index: 10;
 }
 .dinapic-container{
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 1;
 }
 
@@ -177,47 +177,47 @@ main{
 
 }
 .prog-container{
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 3;
 }
 .volley-container{
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 5;
 }
 .yt-container{
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 7;
 }
 
 .videogame-container{
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 9;
 }
 
 .aboutme-part{
     grid-area: main;
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 1;
 }
 .prog-part{
     grid-area: main;
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 3;
 }
 .volley-part{
     grid-area: main;
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 5;
 
 }
 .music-part{
     grid-area: main;
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 7;
 }
 .videogame-part{
     grid-area: main;
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 9;
 
 }
