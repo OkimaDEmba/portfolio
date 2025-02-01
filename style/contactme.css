@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -9,11 +12,11 @@ body{
     grid-template-areas:
     "profile navbar"
     "title title"
-    "main main";
+    "main main"
+    "footer footer";
     min-height: 100vh;
     background-image: url(../images/bg.jpg);
-    background-blend-mode: lighten;
-    background-color: rgba(255,255,255,0.35);
+    background-repeat: repeat;
 }
 .profile{
     grid-area: profile;
@@ -25,6 +28,7 @@ body{
     border-bottom-width: 4px;
     font-size: 10pt;
     text-align: left;
+    z-index: 1000;
 }
 .profile h1{
     grid-column: 2;
@@ -89,4 +93,13 @@ nav ul li ul li a{
 li{
     list-style-type: none;
 
+}
+
+.title{
+    grid-area: title;
+    margin: auto;
+}
+
+.contact{
+    font-family: Kanit, sans-serif;
 }
