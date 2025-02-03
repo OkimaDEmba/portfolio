@@ -97,9 +97,30 @@ li{
 
 .title{
     grid-area: title;
-    margin: auto;
+    margin: 125px auto;
+    border: 6px outset deepskyblue;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px 15px;
+    background-image: linear-gradient(to top, #FBDCE4,rgba(93, 59, 43, 0.6), rgba(93, 59, 43, 0.6), rgba(93, 59, 43, 0.6), rgba(93, 59, 43, 0.6), rgba(93, 59, 43, 0.6), #FBDCE4);
+
 }
 
 .contact{
-    font-family: Kanit, sans-serif;
+    font-family: "Rubik Mono One", sans-serif;
+    color: white;
+    font-size: 22pt;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 25vw auto auto 25vw;
+    grid-template-rows: repeat(4, 100px);
+}
+form{
+    grid-column: 3;
+    display: flex;
 }

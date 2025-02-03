@@ -17,6 +17,8 @@ body{
     min-height: 100vh;
     background-image: url(../images/bg.jpg);
     background-repeat: repeat;
+    background-blend-mode: saturation;
+    background-color: rgba(0,0,0,0.3);
 }
 .profile{
     grid-area: profile;
@@ -155,6 +157,7 @@ main{
     padding: 3% 0;
     background-image: linear-gradient(to top, #FFF, rgba(255,194,243,0.47),rgba(255,194,243,0.7), rgba(255,194,243,0.47), #FFF);
     color: white;
+    text-transform: uppercase;
 
 }
 .containers{
